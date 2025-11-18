@@ -48,4 +48,10 @@ document.addEventListener("click", function() {
   audio[0].play()
 })
 
+$("#name-id").html("Happy Wedding Day")
+// nếu có query string là name thì hiển thị tên đó
+// query string có dạng ?name=Tiếng Việt có dấu làm sao lấy được
+if (window.location.search.includes("name")) {
+  $("#name-id").html(decodeURIComponent( "<div style='font-size: 24px;'>Trân trọng mời</div>" +window.location.search.split("name=")[1]))
+}
 
